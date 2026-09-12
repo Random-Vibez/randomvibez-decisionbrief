@@ -1,0 +1,7 @@
+{
+  "name": "randomvibez-decisionbrief",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local-first evidence-linked decision brief",
+  "scripts": {"test": "node tests/smoke-test.js"}
+}

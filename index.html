@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A private, evidence-linked decision brief for bounded choices."><title>Decision Brief</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to brief</a>
+<header class="site-header"><div class="shell header-inner"><a class="brand" href="./" aria-label="Decision Brief home"><span class="brand-mark">DB</span><span>Decision Brief</span></a><nav aria-label="Actions"><button class="button button-quiet" id="sampleBtn">Load starter</button><button class="button button-quiet" id="importBtn">Import JSON</button><button class="button button-primary" id="exportBtn">Export brief</button><input id="fileInput" type="file" accept="application/json,.json" hidden></nav></div></header>
+<main id="main" class="shell">
+<section class="intro"><div><p class="eyebrow">Private by default</p><h1>Make a choice you can explain.</h1><p class="lede">Gather the options, weigh what matters, and leave a clear trail of evidence and uncertainty. Everything stays in this browser.</p></div><div class="notice" role="note"><strong>Use this for bounded choices.</strong><br>Not professional advice or objective truth. Your scores reflect your inputs.</div></section>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<section class="workspace" aria-label="Decision brief editor">
+<div class="panel setup-panel"><div class="panel-heading"><div><p class="section-kicker">Start here</p><h2>The decision</h2></div><span class="step">1</span></div>
+<label for="question">What are you deciding?</label><input id="question" maxlength="180" placeholder="Which laptop should I buy?" />
+<div class="field-row"><div><label for="deadline">Deadline <span class="muted">(optional)</span></label><input id="deadline" type="date"></div><div><label for="nextAction">Next action <span class="muted">(optional)</span></label><input id="nextAction" maxlength="160" placeholder="Ask for a trial or check one more fact"></div></div>
+</div>
+<div class="panel options-panel"><div class="panel-heading"><div><p class="section-kicker">Compare</p><h2>Options</h2><p class="help">Name 2 to 8 options. Add a short note and source for each.</p></div><span class="step">2</span></div><div id="options" class="repeat-list"></div><button class="button button-secondary" id="addOption">+ Add option</button></div>
+<div class="panel criteria-panel"><div class="panel-heading"><div><p class="section-kicker">Decide what matters</p><h2>Criteria</h2><p class="help">Use 3 to 6 criteria. Weight from 1 to 5 if some matter more.</p></div><span class="step">3</span></div><div id="criteria" class="repeat-list"></div><button class="button button-secondary" id="addCriterion">+ Add criterion</button></div>
+<div class="panel results-panel"><div class="panel-heading"><div><p class="section-kicker">See the trade-offs</p><h2>Weighted result</h2><p class="help">Scores are yours: 1 means weak fit, 5 means strong fit. The result is a transparent calculation, not a recommendation.</p></div><span class="step">4</span></div><div id="results"></div></div>
+<div class="panel reflection-panel"><div class="panel-heading"><div><p class="section-kicker">Keep it honest</p><h2>Unknowns and reversibility</h2></div></div><label for="unknowns">What is still unknown?</label><textarea id="unknowns" maxlength="1600" rows="4" placeholder="What evidence would reduce uncertainty?"></textarea><label for="mind">What would change my mind?</label><textarea id="mind" maxlength="1600" rows="4" placeholder="A price change, test result, or answer from a trusted source..."></textarea></div>
+</section>
+<section class="bottom-actions"><button class="button button-primary" id="markdownBtn">Download Markdown</button><button class="button button-secondary" id="printBtn">Print / save PDF</button><button class="button button-secondary" id="jsonBtn">Backup JSON</button><p class="storage-note">Autosaved locally. Export a backup before clearing browser data. Exports can contain sensitive notes.</p></section>
+<footer><p>Decision Brief is a local-first tool for organizing your inputs. It does not send data anywhere.</p><a href="docs/decision-record.md">Read the decision record</a></footer>
+</main><script src="app.js"></script>
+</body></html>
